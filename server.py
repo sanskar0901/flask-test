@@ -7,8 +7,8 @@ app = Flask(__name__)
 CORS(app)
 # Load the model
 
-model = pickle.load(open('../Fertilizer-Recommendation-System/fertilizer.pkl', 'rb'))
-modelCropPredict=pickle.load(open('../Crop-Recommendation-System/RandomForest.pkl','rb'))
+model = pickle.load(open('./fertilizer.pkl', 'rb'))
+modelCropPredict=pickle.load(open('./RandomForest.pkl','rb'))
 @app.route('/', methods = ['GET'])
 def home():
     return 'Hello World'
